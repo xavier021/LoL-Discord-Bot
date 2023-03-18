@@ -38,26 +38,40 @@ export function statsMsg(player, channel) {
     .setDescription("Game Summary")
     .addField(`***${outcome}***`, "...")
     .setThumbnail(`attachment://${outcome}.png`)
-    .addFields({
-      name: "____",
-      value: `\n
-        **Champion**: ${player.playerObj.championName}
+    .addFields(
+      {
+        name: "__Role__",
+        value: `\n
         **Position**: ${player.playerObj.lane}
-        **Kills**: ${player.playerObj.kills}
-        **Deaths**: ${player.playerObj.deaths}
-        **Assists**: ${player.playerObj.assists}
-        **Largest Multi**: ${player.playerObj.largestMultiKill}
-        **Total Damage Dealt**: ${player.playerObj.totalDamageDealtToChampions}
-        **Total Gold Earned**: ${player.playerObj.goldEarned}
-        **CS Score**: ${
-          player.playerObj.totalMinionsKilled +
-          player.playerObj.neutralMinionsKilled
-        }
-        **Game Duration**: ${player.matchTime}
+        **Champion**: ${player.playerObj.championName}
+        **__Rank Info__**
         **Rank**: ${player.rankObj.tier + " " + player.rankObj.rank}
         **LP Gained**: ${player.lp.change}
         `,
-    })
+        inline: true,
+      },
+      {
+        name: "__KDA__",
+        value: `
+      **Kills**: ${player.playerObj.kills}
+      **Deaths**: ${player.playerObj.deaths}
+      **Assists**: ${player.playerObj.assists}`,
+        inline: true,
+      },
+      {
+        name: "__Stats__",
+        value: `
+    **Largest Multi**: ${player.playerObj.largestMultiKill}
+    **Total Damage Dealt**: ${player.playerObj.totalDamageDealtToChampions}
+    **Total Gold Earned**: ${player.playerObj.goldEarned}
+    **CS Score**: ${
+      player.playerObj.totalMinionsKilled +
+      player.playerObj.neutralMinionsKilled
+    }
+    **Game Duration**: ${player.matchTime}`,
+        inline: true,
+      }
+    )
     .setImage(
       `http://ddragon.leagueoflegends.com/cdn/12.3.1/img/champion/${player.playerObj.championName}.png`
     )
@@ -108,26 +122,40 @@ export function statsCmdMsg(player, message) {
     )
     .addField(`***${outcome}***`, "...")
     .setThumbnail(`attachment://${outcome}.png`)
-    .addFields({
-      name: "____",
-      value: `\n
-        **Champion**: ${player.playerObj.championName}
+    .addFields(
+      {
+        name: "__Role__",
+        value: `\n
         **Position**: ${player.playerObj.lane}
-        **Kills**: ${player.playerObj.kills}
-        **Deaths**: ${player.playerObj.deaths}
-        **Assists**: ${player.playerObj.assists}
-        **Largest Multi**: ${player.playerObj.largestMultiKill}
-        **Total Damage Dealt**: ${player.playerObj.totalDamageDealtToChampions}
-        **Total Gold Earned**: ${player.playerObj.goldEarned}
-        **CS Score**: ${
-          player.playerObj.totalMinionsKilled +
-          player.playerObj.neutralMinionsKilled
-        }
-        **Game Duration**: ${player.matchTime}
+        **Champion**: ${player.playerObj.championName}
+        **__Rank Info__**
         **Rank**: ${player.rankObj.tier + " " + player.rankObj.rank}
         **LP Gained**: ${player.lp.change}
         `,
-    })
+        inline: true,
+      },
+      {
+        name: "__KDA__",
+        value: `
+      **Kills**: ${player.playerObj.kills}
+      **Deaths**: ${player.playerObj.deaths}
+      **Assists**: ${player.playerObj.assists}`,
+        inline: true,
+      },
+      {
+        name: "__Stats__",
+        value: `
+    **Largest Multi**: ${player.playerObj.largestMultiKill}
+    **Total Damage Dealt**: ${player.playerObj.totalDamageDealtToChampions}
+    **Total Gold Earned**: ${player.playerObj.goldEarned}
+    **CS Score**: ${
+      player.playerObj.totalMinionsKilled +
+      player.playerObj.neutralMinionsKilled
+    }
+    **Game Duration**: ${player.matchTime}`,
+        inline: true,
+      }
+    )
     .setTimestamp();
 
   message.reply({ embeds: [statsMsgEmbed], files: [icon, outcomePic] });
