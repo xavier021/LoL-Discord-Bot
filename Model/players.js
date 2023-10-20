@@ -22,7 +22,7 @@ export const players = [
     lp: { current: 0, change: 0 },
   },
   {
-    name: "Sneakymanny",
+    name: "SneakyManny",
     puuid:
       "XJcnkOlSkk8IrzNpYidQbybibuJdksVCYrj6_tzSN_DkY2_LIoAUomPjMVm5h7lVcZQSBCa67TiLYw",
     discordName: "",
@@ -44,7 +44,7 @@ export const players = [
     lp: { current: 0, change: 0 },
   },
   {
-    name: "Debtz II",
+    name: "Debtzz",
     puuid:
       "vD0RFI46YKAxOjq07k0xuKFNgHNsFhd_HKJpByZL57rH6NzXaHwD9I3NndoDLlpmxanxvwDV1g0TPg",
     discordName: "",
@@ -88,7 +88,7 @@ export const players = [
     lp: { current: 0, change: 0 },
   },
   {
-    name: "Marlon skilZ",
+    name: "MarloniZkiLLs",
     puuid:
       "mM4Zps-DPOFoPfa7-sbmwMaMkIlNm6acFHkgH16-EAACbPp-cXxTruPtnipz0Nd5UtUAXg9FYCZfkg",
     discordName: "",
